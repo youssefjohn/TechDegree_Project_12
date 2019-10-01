@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+  <div class="bounds">
+    <div class="grid-30 centered">
+      <h2>Sign Up</h2>
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="email" name="email" placeholder="Email Address">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="password2" placeholder="Confirm Password">
+        <button type="submit" class="button-primary">Sign Up</button>
+        <a class="button" href="signin.html">Sign In</a>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+
