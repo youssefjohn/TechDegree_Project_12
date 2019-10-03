@@ -70,7 +70,7 @@
             <div class="circle--secondary--module">
                 <div class="circle--primary--avatar:before">
                     {% if person.user_details.picture %}
-                        <img src="{{ person.user_details.picture.url }}" alt="">
+                        <img src="{{ person.user_details.picture.url }}" alt="" width="240">
                     {% else %}
                         <img src="{% static "images/defaultimg.png" %}" alt="" width="240" height="">
                     {% endif %}

@@ -8,6 +8,7 @@ class User_details(models.Model):
     relation = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
     picture = models.ImageField(upload_to='profile_pictures', blank=True)
+    # skills = models.CharField(max_length=255)
 
 
 class Project(models.Model):
@@ -19,6 +20,8 @@ class Project(models.Model):
 
 
 
+class UserSkills(models.Model):
+    pass
 
 
 

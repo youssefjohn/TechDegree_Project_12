@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect, reverse
 from .forms import User_form, UserDetails_form, EditProfile_form
 from django.contrib.auth import login, logout, authenticate, update_session_auth_hash, get_user_model
 from django.contrib.auth.decorators import login_required
-
+from .models import User_details
 
 
 def index_view(request):
@@ -27,14 +27,8 @@ def signup_view(request):
             new_form.set_password(new_form.password)
             user = new_form.save()
 
-
-            form2 = UserDetails_form()
-            form2 = form2.save(commit=False)
-            form2.bio = ''
-            form2.picture = None
-            form2.relation = user
-            details = form2.save()
-
+            a = User_details(relation=new_form)
+            a = a.save()
 
             return HttpResponseRedirect(reverse('index'))
         else:
@@ -78,21 +72,60 @@ def profile_view(request):
 
 @login_required()
 def profile_edit_view(request):
+    # if request.method == 'POST':
+    #     form1 = EditProfile_form(instance=request.user, data=request.POST)
+    #     if form1.is_valid():
+    #         form1.save()
+    #         update_session_auth_hash(request, user=request.user)
+    #         return HttpResponseRedirect(reverse('index'))
+    #     else:
+    #         print('form not valid')
+    #
+    # else:
+    #     form1 = EditProfile_form()
+    #     form2 = UserDetails_form(instance=request.user)
+    #
+    # person = request.user
+    # return render(request, 'account/profile_edit.html', {'person':person})
+
+    # PICTURE IS BEING PRINTED BUT IS NOT SAVING
+    skills = {'skills': ['python', 'java', 'c', 'django', 'flask', 'go', 'ruby', 'php', 'qa']}
+    user = request.user
+
     if request.method == 'POST':
-        form1 = EditProfile_form(instance=request.user, data=request.POST)
-        if form1.is_valid():
+        form1 = EditProfile_form(instance=user, data=request.POST)
+        form2 = UserDetails_form(instance=user.user_details, data=request.POST)
+
+        if form1.is_valid() and form2.is_valid():
             form1.save()
-            update_session_auth_hash(request, user=request.user)
+            form2 = form2.save(commit=False)
+
+            if 'picture' in request.FILES:
+                form2.picture = request.FILES['picture']
+                print(form2.picture)
+                form2.save()
+
+            else:
+                print("no picture")
+
+            form2.save()
+            update_session_auth_hash(request, user)
             return HttpResponseRedirect(reverse('index'))
-        else:
-            print('form not valid')
 
-    else:
-        form1 = EditProfile_form()
-        print("not post.")
 
-    person = request.user
-    return render(request, 'account/profile_edit.html', {'person':person})
+    return render(request, 'account/profile_edit.html', {'person':user, 'skills':skills})
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
