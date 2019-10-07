@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af81ab7f-fd26-4708-9383-0548830412f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/applications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/profile_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/project.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/project_edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/project_new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/signin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/templates/account/profile_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/account/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +114,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25178713" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25377283" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

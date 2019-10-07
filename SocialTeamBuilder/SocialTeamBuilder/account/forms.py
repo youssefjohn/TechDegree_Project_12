@@ -1,5 +1,6 @@
-from .models import User_details, Project, User
+from .models import User_details, Project, User, PositionModel
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm, AuthenticationForm, forms
+
 
 
 
@@ -29,6 +30,11 @@ class UserDetails_form(forms.ModelForm):
 
 
 
+
+class Position_form(forms.ModelForm):
+    class Meta:
+        model= PositionModel
+        fields='__all__'
 
 
 

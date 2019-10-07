@@ -25,11 +25,16 @@
 
         <div class="grid-70">
             <h1>{{ person.username }}</h1>
+            {% for skill in person.user_details.skills.all %}
+                {{ skill.title }}
+            {% endfor %}
+            <h2>{{ person.user_details.skill.title }}</h2>
             <div class="circle--article--body">
                 {% if person.user_details.bio %}
                     {{ person.user_details.bio }}
                 {% else %}
-                    No Bio has been provided. Please Click on the Edit button to your right, to edit your profile and add a bio.
+                    No Bio has been provided. Please Click on the Edit button to your right, to edit your profile and
+                    add a bio.
 
                 {% endif %}
 
@@ -79,18 +84,20 @@
 
             <div class="circle--secondary--module">
                 <h4>My Skills</h4>
+
                 <ul class="unloaded">
-                    <li>Skill 1</li>
-                    <li>Skill 2</li>
-                    <li>Skill 3</li>
-                    <li>Skill 4</li>
-                    <li>Skill 5</li>
+
+                    {% for skill in person.user_details.skills.all %}
+                        <li>{{ skill.title }}</li>
+                    {% endfor %}
+
                 </ul>
             </div>
 
             <div class="circle--secondary--module">
                 <h4>My Projects</h4>
                 <ul class="circle--link--list">
+
                     <li><a>Project 1</a></li>
                     <li><a>Project 2</a></li>
                     <li><a>Project 3</a></li>

@@ -33,11 +33,11 @@
             </div>
 
             <div class="grid-70">
-                <input type="text" placeholder="{{ person.username }}" name='username' class="circle--input--h1">
+                <input type="text" placeholder="{{ person.username }}" name='username' class="circle--input--h1" value="{{ person.username }}">
                 <div class="circle--article--body">
-                    <textarea placeholder="Tell us about yourself..." name="bio">{{ person.user_details.bio }}</textarea>
+                    <textarea value="{{ person.user_details.bio }}" name="bio">{{ person.user_details.bio }}</textarea>
                 </div>
-                <input type="email" placeholder="{{ person.email }}" name='email' class="circle--input--h4">
+                <input type="email"  name='email' class="circle--input--h4" value="{{ person.email }}">
 
                 <h2>Past Projects</h2>
                 <table class="u-full-width circle--table">
@@ -83,11 +83,15 @@
                     <h4>My Skills</h4>
                     <ul class="circle--clone--list">
 
+
+
                         <li>
-                            <input type="text" placeholder="Skill" name="skill"/>
+                            <input type="text" placeholder="Skills" name="skill"/>
                             <a class="circle--clone--add">Add Skill</a>
                             <a class="circle--clone--remove">Remove</a>
+
                         </li>
+
                     </ul>
                 </div>
 

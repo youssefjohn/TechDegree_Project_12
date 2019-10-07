@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block body %}
+    <form method>
+        {% csrf_token %}
+
+        <div class="circle--secondary--module">
+            <h4>My Skills</h4>
+            <ul class="circle--clone--list">
+
+
+                <li>
+                    <input type="text" placeholder="Skills" name="skill"/>
+                    <a class="circle--clone--add">Add Skill</a>
+                    <a class="circle--clone--remove">Remove</a>
+
+                    <input type="submit" value="submit">
+                </li>
+
+            </ul>
+        </div>
+    </form>
+
+
+
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ formset.as_p }}
+
+
+
+    </form>
+{% endblock %}
