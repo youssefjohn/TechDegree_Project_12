@@ -1,13 +1,23 @@
-from django.shortcuts import render, HttpResponseRedirect, reverse
-from .forms import User_form, UserDetails_form, EditProfile_form, Position_form
+from django.shortcuts import render, HttpResponseRedirect, reverse, get_object_or_404
+from .forms import User_form, UserDetails_form, EditProfile_form, Position_form, Project_form, EditProject_form, EditPosition_form
 from django.contrib.auth import login, logout, authenticate, update_session_auth_hash, get_user_model
 from django.contrib.auth.decorators import login_required
-from .models import User_details, UserSkills, PositionModel
+from .models import User_details, UserSkills, PositionModel, Project
 from django.forms import modelformset_factory
 
 
 def index_view(request):
-    return render(request, 'index.html')
+    user = request.user
+    projects = Project.objects.exclude(user=user)
+
+
+
+
+
+
+
+
+    return render(request, 'index.html', {'projects':projects})
 
 
 
@@ -18,10 +28,6 @@ def signup_view(request):
         password = request.POST.get('password')
         form = {'username':username,'email':email, 'password':password}
         new_form = User_form(data=form)
-
-
-
-
 
         if new_form.is_valid():
             new_form = new_form.save(commit=False)
@@ -43,7 +49,6 @@ def signin_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-
 
         person = authenticate(username = username, password = password)
 
@@ -74,7 +79,9 @@ def logout_view(request):
 @login_required()
 def profile_view(request):
     person = request.user
-    return render(request, 'account/profile.html', {'person':person})
+    projects = Project.objects.filter(user=person)
+    projects2 = Project.objects.select_related().filter(user=person)
+    return render(request, 'account/profile.html', {'person':person, 'projects':projects, 'projects2':projects2})
 
 
 
@@ -119,6 +126,7 @@ def profile_edit_view(request):
                 else:
                     user.user_details.skills.add(a)
 
+
             form2.save()
             update_session_auth_hash(request, user)
             return HttpResponseRedirect(reverse('index'))
@@ -138,57 +146,108 @@ def profile_edit_view(request):
 # ******************************************
 
 
+@login_required()
+def project_view(request, pk):
+    user = request.user
 
-def project_view(request):
+    project = get_object_or_404(Project, pk=pk)
+    position = project.position.all()
+
+    return render(request, 'account/project.html', {'project':project, 'position':position})
 
 
-
-    return render(request, 'account/project.html')
-
-
-
+@login_required()
 def new_project_view(request):
-    print('view running')
+    user = request.user
 
     if request.method == 'POST':
-        print("info posted")
-
         ptitle = request.POST.get('ptitle')
         pdescription = request.POST.get('pdescription')
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        time = request.POST.get('Time')
+        skill = request.POST.get('Skill')
 
         form = {'title':ptitle, 'description': pdescription}
-
+        form2 = {'title':title, 'description': description, 'project_timeline':time}
 
         positionform = Position_form(data=form)
+        projectform = Project_form(data=form2)
 
-        if positionform.is_valid():
-            print('form valid')
+        if positionform.is_valid() and projectform.is_valid():
             positionform = positionform.save()
+            projectform = projectform.save(commit=False)
+            projectform.user = user
+            projectform.save()
+            projectform.position.add(positionform)
+            try:
+                a = UserSkills.objects.get(title=skill)
+            except UserSkills.DoesNotExist:
+                print('doesnt exist')
+            else:
+                projectform.related_skill.add(a)
+
             return HttpResponseRedirect(reverse('index'))
-
-        else:
-            print('form not valid')
-
 
     else:
         positionform = Position_form()
-        print('not POST')
-
+        projectform = Project_form()
 
     return render(request, 'account/project_new.html')
 
 
 
 
-
-def edit_project_view(request):
-    pass
-
-
-
+@login_required()
+def edit_project_view(request,pk):
+    project = get_object_or_404(Project, pk=pk)
+    position = project.position.all().first()
 
 
+    if request.method == 'POST':
+        print('post request')
+        print(position)
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        ptitle = request.POST.get('ptitle')
+        pdescription = request.POST.get('pdescription')
+        time = request.POST.get('time')
+        skill = request.POST.get('skill')
+        print(title, description, ptitle, pdescription, time, skill)
 
+        items_for_project_form = {'title':title,'description':description, 'project_timeline':time}
+        form1 = Project_form(instance=project, data=items_for_project_form)
+
+        items_for_position_form = {'title':ptitle, 'description':pdescription}
+        form2 = Position_form(instance=position, data=items_for_position_form)
+
+        if form1.is_valid() and form2:
+            form1.save()
+            form2.save()
+            try:
+                a = UserSkills.objects.get(title=skill)
+            except UserSkills.DoesNotExist:
+                print('doesnt exist')
+            else:
+                project.related_skill.add(a)
+
+
+
+            return HttpResponseRedirect(reverse('index'))
+
+    return render(request, 'account/project_edit.html', {'project': project})
+
+
+
+
+@login_required()
+def delete_project_view(request, pk):
+
+    delete = get_object_or_404(Project, pk=pk)
+
+    delete.delete()
+
+    return HttpResponseRedirect(reverse('account:profile'))
 
 
 

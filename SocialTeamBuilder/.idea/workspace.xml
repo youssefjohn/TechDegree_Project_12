@@ -2,20 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="405401cd-7f19-4c48-a60f-59258844b949" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0002_auto_20191001_1120.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0003_auto_20191001_1128.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0004_userskills.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0005_auto_20191003_1054.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0006_auto_20191003_1233.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0007_project_related_skill.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0008_project_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0009_position.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0010_auto_20191004_2209.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0011_auto_20191007_2011.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0012_remove_project_position.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0013_project_position.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0014_auto_20191007_2015.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0015_auto_20191007_2016.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0016_auto_20191007_2022.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/account/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SocialTeamBuilder/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/SocialTeamBuilder/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,80 +40,106 @@
     <SUITE FILE_PATH="coverage/SocialTeamBuilder$check.coverage" NAME="check Coverage Results" MODIFIED="1570223353935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/SocialTeamBuilder/account" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="86" selection-start-line="34" selection-start-column="86" selection-end-line="34" selection-end-column="86" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
-              <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile_edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1131">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.48603082">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_edit.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-13">
+                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="90" lean-forward="true" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile_edit.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1260">
+                  <caret line="84" selection-start-line="84" selection-end-line="84" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="219">
+                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="647">
+                  <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="237">
+                  <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="68" />
+                  <folding>
+                    <element signature="e#0#85#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/forms.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="741">
+                  <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#62#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/templates/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-21">
+                  <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -123,19 +161,20 @@
         <option value="$PROJECT_DIR$/SocialTeamBuilder/templates/base.html" />
         <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/signup.html" />
         <option value="$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/urls.py" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project.html" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_edit.html" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile.html" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/templates/index.html" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/urls.py" />
         <option value="$PROJECT_DIR$/SocialTeamBuilder/account/check.py" />
         <option value="$PROJECT_DIR$/SocialTeamBuilder/account/admin.py" />
         <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile_edit.html" />
         <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/test.html" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/forms.py" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/views.py" />
-        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0012_remove_project_position.py" />
         <option value="$PROJECT_DIR$/SocialTeamBuilder/account/models.py" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile.html" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project.html" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/urls.py" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/forms.py" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_edit.html" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/account/views.py" />
+        <option value="$PROJECT_DIR$/SocialTeamBuilder/templates/index.html" />
       </list>
     </option>
   </component>
@@ -176,6 +215,13 @@
               <item name="SocialTeamBuilder" type="462c0819:PsiDirectoryNode" />
               <item name="SocialTeamBuilder" type="462c0819:PsiDirectoryNode" />
               <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SocialTeamBuilder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SocialTeamBuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="SocialTeamBuilder" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SocialTeamBuilder" type="b2602c69:ProjectViewProjectNode" />
@@ -295,12 +341,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17553614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32931727" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32931727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -310,7 +357,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32931727" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32931727" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -364,24 +411,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="103" column="45" lean-forward="true" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0006_auto_20191003_1233.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0007_auto_20191004_1119.py" />
-    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -389,13 +422,6 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -417,6 +443,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0018_auto_20191007_2037.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0017_auto_20191007_2037.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0012_remove_project_position.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0011_auto_20191007_2011.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0013_project_position.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0014_auto_20191007_2015.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#49#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/SocialTeamBuilder/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -427,71 +496,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        <state relative-caret-position="1260">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="90" lean-forward="true" selection-start-line="10" selection-start-column="90" selection-end-line="10" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="150">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="58" column="25" lean-forward="true" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="741">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/profile_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1131">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
+        <state relative-caret-position="237">
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="68" />
           <folding>
-            <element signature="e#0#66#0" expanded="true" />
+            <element signature="e#0#85#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/templates/account/project_new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/account/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="86" selection-start-line="34" selection-start-column="86" selection-end-line="34" selection-end-column="86" />
+        <state relative-caret-position="225">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SocialTeamBuilder/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
         </state>
       </provider>
     </entry>

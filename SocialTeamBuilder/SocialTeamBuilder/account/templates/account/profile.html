@@ -43,30 +43,29 @@
 
             <h2>Past Projects</h2>
             <table class="u-full-width circle--table">
+
                 <thead>
                 <tr>
                     <th>Project Title</th>
                     <th class="circle--cell--right">Project Needs</th>
                 </tr>
                 </thead>
+
+                {% for pro in projects %}
                 <tbody>
                 <tr class="clickable-row" data-href="project.html">
                     <td>
-                        <h3>Invoice Delivery Tool</h3>
+                        <h3>{{ pro.title }}</h3>
                     </td>
                     <td class="circle--cell--right">
-                        <span class="secondary-label">Rails Developer</span>
-                    </td>
-                </tr>
-                <tr class="clickable-row" data-href="project.html">
-                    <td>
-                        <h3>Twitter Client</h3>
-                    </td>
-                    <td class="circle--cell--right">
-                        <span class="secondary-label">Designer</span>
+                        <span class="secondary-label">{% for thing in pro.position.all %}
+                            {{ thing.title }}
+                            {% endfor %}
+                            </span>
                     </td>
                 </tr>
                 </tbody>
+                {% endfor %}
             </table>
         </div>
 
@@ -98,10 +97,10 @@
                 <h4>My Projects</h4>
                 <ul class="circle--link--list">
 
-                    <li><a>Project 1</a></li>
-                    <li><a>Project 2</a></li>
-                    <li><a>Project 3</a></li>
-                    <li><a>Project 4</a></li>
+                    {% for pro in projects %}
+                        <li><a href="{% url 'account:project' pk=pro.id %}">{{ pro.title }}</a></li>
+                    {% endfor %}
+
                 </ul>
             </div>
         </div>

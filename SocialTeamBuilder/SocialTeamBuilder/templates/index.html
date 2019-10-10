@@ -37,29 +37,42 @@
         <div class="grid-70 grid-push-5">
             <table class="u-full-width circle--table">
                 <thead>
+
                 <tr>
                     <th>Project Title</th>
                     <th class="circle--cell--right">Project Needs</th>
+                    <th class="circle--cell--right">Project Creator</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr class="clickable-row" data-href="project.html">
-                    <td>
-                        <h3>Invoice Delivery Tool</h3>
-                    </td>
-                    <td class="circle--cell--right">
-                        <span class="secondary-label">Rails Developer</span>
-                    </td>
-                </tr>
-                <tr class="clickable-row" data-href="project.html">
-                    <td>
-                        <h3>Twitter Client</h3>
-                    </td>
-                    <td class="circle--cell--right">
-                        <span class="secondary-label">Designer</span>
-                    </td>
-                </tr>
-                </tbody>
+                {% for pro in projects %}
+                    <tbody>
+                    <tr class="clickable-row" data-href="project.html">
+                        <td>
+                            <h3>{{ pro.title }}</h3>
+                        </td>
+
+                        {% for pos in pro.position.all %}
+                            {% if pos %}
+                                <td class="circle--cell--right">
+                                    <span class="secondary-label">{{ pos.title }}</span>
+                                </td>
+                                <td class="circle--cell--right">
+                                    <span class="secondary-label">{{ pro.user }}</span>
+                                </td>
+                            {% else %}
+                                <td class="circle--cell--right">
+                                    <span class="secondary-label">No Requirements</span>
+                                </td>
+                                <td class="circle--cell--right">
+                                    <span class="secondary-label">No Requirements</span>
+                                </td>
+                            {% endif %}
+
+                        {% endfor %}
+                    </tr>
+
+                    </tbody>
+                {% endfor %}
             </table>
         </div>
     </div>

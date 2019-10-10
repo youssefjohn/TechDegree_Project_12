@@ -29,6 +29,10 @@ class UserDetails_form(forms.ModelForm):
 
 
 
+class Project_form(forms.ModelForm):
+    class Meta:
+        model=Project
+        fields=('title', 'description', 'project_timeline')
 
 
 class Position_form(forms.ModelForm):
@@ -38,6 +42,17 @@ class Position_form(forms.ModelForm):
 
 
 
+class EditProject_form(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ('title', 'description', 'related_skill', 'project_timeline')
+
+
+
+class EditPosition_form(forms.ModelForm):
+    class Meta:
+        model = PositionModel
+        fields = '__all__'
 
 
 
