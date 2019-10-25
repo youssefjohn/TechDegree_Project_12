@@ -36,7 +36,7 @@
 
                         <h3>{{ pro }}</h3>
                         <p>{{ pro.description }}</p>
-                        <a class="button button-primary">Apply</a>
+                        <a class="button button-primary" href="{% url 'account:apply' pk=project.id %}">Apply</a>
                     </li>
                     <li>
                         <h3>Designer</h3>

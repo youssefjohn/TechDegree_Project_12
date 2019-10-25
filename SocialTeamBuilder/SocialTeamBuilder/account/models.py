@@ -39,6 +39,14 @@ class Project(models.Model):
         return self.title
 
 
+class Applications(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, default=None)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, blank=True, default=None)
+    accept_reject = models.CharField(max_length=10, blank=True)
+
+
+
+
 
 
 

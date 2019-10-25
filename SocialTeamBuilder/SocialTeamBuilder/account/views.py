@@ -2,22 +2,22 @@ from django.shortcuts import render, HttpResponseRedirect, reverse, get_object_o
 from .forms import User_form, UserDetails_form, EditProfile_form, Position_form, Project_form, EditProject_form, EditPosition_form
 from django.contrib.auth import login, logout, authenticate, update_session_auth_hash, get_user_model
 from django.contrib.auth.decorators import login_required
-from .models import User_details, UserSkills, PositionModel, Project
+from .models import User_details, UserSkills, PositionModel, Project, Applications, User
 from django.forms import modelformset_factory
 
 
 def index_view(request):
-    user = request.user
-    projects = Project.objects.exclude(user=user)
+    if request.user.is_authenticated:
+        user = request.user
+
+        projects = Project.objects.exclude(user=user)
 
 
+        return render(request, 'index.html', {'projects':projects})
 
+    else:
+        return render(request, 'index.html')
 
-
-
-
-
-    return render(request, 'index.html', {'projects':projects})
 
 
 
@@ -82,6 +82,18 @@ def profile_view(request):
     projects = Project.objects.filter(user=person)
     projects2 = Project.objects.select_related().filter(user=person)
     return render(request, 'account/profile.html', {'person':person, 'projects':projects, 'projects2':projects2})
+
+
+
+
+def other_persons_profile(request, pk):
+    user = get_object_or_404(User, pk=pk)
+
+    projects = Project.objects.filter(user=user)
+    projects2 = Project.objects.select_related().filter(user=user)
+    return render(request, 'account/otherprofile.html', {'person':user, 'projects':projects, 'projects2':projects2})
+
+
 
 
 
@@ -245,9 +257,108 @@ def delete_project_view(request, pk):
 
     delete = get_object_or_404(Project, pk=pk)
 
+
     delete.delete()
 
     return HttpResponseRedirect(reverse('account:profile'))
+
+
+
+
+
+
+
+# ******************************************
+# ********** APPLICATIONS ******************
+# ******************************************
+
+
+
+
+
+def apply_view(request, pk):
+
+    project = get_object_or_404(Project, pk=pk)
+
+
+
+    # application = Applications()
+    # application.user = request.user
+    # application.save()                       # Application must be saved first, in order to make a manytomany relationship
+    # application.project.add(project)         # On this line. You create the instance, give it a users foreign key, save it,
+    #                                          # Then make the many to many relationship. If the application instance is not saved
+    #                                          # It is therefore not in the database, and doesnt exist. Project cant form a bond with
+    #                                          # Something that is not in the database.
+
+
+
+
+
+    application = Applications()
+    application.user = request.user
+    application.project = project
+    application.save()
+
+    return HttpResponseRedirect(reverse('index'))
+
+
+
+
+def application_view(request):
+    applications = Applications.objects.all().filter(project__user=request.user, accept_reject="")
+    projects = Project.objects.all().filter(user=request.user)
+
+    return render(request, 'account/applications.html', {'application': applications, 'projects': projects})
+
+
+def application_view2_allows_filtering_of_projects(request,pk):
+
+    applications = Applications.objects.all().filter(project__user=request.user, accept_reject="", project__id=pk)
+    projects = Project.objects.all().filter(user=request.user)
+
+    return render(request, 'account/applications.html', {'application': applications, 'projects': projects})
+
+
+
+
+def applications_returned_reject_view(request, pk):
+    person = get_object_or_404(Applications, pk=pk)
+    person.accept_reject = "reject"
+    person.save()
+
+    return HttpResponseRedirect(reverse('index'))
+
+
+
+
+
+def applications_returned_accept_view(request,pk):
+    person = get_object_or_404(Applications, pk=pk)
+    person.accept_reject = "accept"
+    person.save()
+
+    return HttpResponseRedirect(reverse('index'))
+
+
+
+
+
+
+
+
+def accepted_applications(request):
+    applications = Applications.objects.all().filter(project__user=request.user, accept_reject="accept")
+    projects = Project.objects.all().filter(user=request.user)
+
+    return render(request, 'account/accept.html', {'application':applications, 'projects': projects})
+
+
+def rejected_applications(request):
+    applications = Applications.objects.all().filter(project__user=request.user, accept_reject="reject")
+    projects = Project.objects.all().filter(user=request.user)
+
+    return render(request, 'account/reject.html', {'application': applications, 'projects': projects})
+
 
 
 
